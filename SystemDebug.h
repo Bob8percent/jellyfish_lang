@@ -11,7 +11,7 @@ namespace jf::sys_debug
 		// エラーが起きたファイル
 		const std::string& file,
 		// エラーが起きた行
-		unsigned line,
+		std::size_t line,
 		// エラーメッセージ
 		const std::string& message
 	);
@@ -23,7 +23,7 @@ namespace jf::sys_debug
 		// ログを出力するファイル
 		const std::string& file,
 		// ログを出力する行
-		unsigned line,
+		std::size_t line,
 		// 出力メッセージ
 		const std::string& message
 	);

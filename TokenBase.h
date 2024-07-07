@@ -26,6 +26,15 @@ namespace jf
 			return m_lexeme;
 		}
 
+		// 当該トークンが存在するソースコード中の行数をセット
+		void setSourceLine(
+			// 行数
+			size_type line
+		)
+		{
+			m_line = line;
+		}
+
 		// ソース文字列からトークンが見つかるか
 		virtual bool isFindToken(
 			// スキャナの情報
@@ -44,5 +53,7 @@ namespace jf
 	protected:
 		// トークンに対応する語彙
 		 LEXEME_TYPE m_lexeme;
+		 // 当該トークンが存在するソースコード中の行数
+		 size_type m_line;
 	};
 }

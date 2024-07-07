@@ -17,7 +17,7 @@ namespace jf
 			// ソース文字列の現在の行
 			size_type line;
 			// ソース文字列
-			const std::string source;
+			const std::string& source;
 
 			// 参照位置がソースコードの最後に到達したか
 			bool isReachSourceEnd(

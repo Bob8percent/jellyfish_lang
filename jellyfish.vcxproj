@@ -139,7 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Assign.cpp" />
+    <ClCompile Include="Binary.cpp" />
+    <ClCompile Include="Call.cpp" />
     <ClCompile Include="Debug.cpp" />
+    <ClCompile Include="Grouping.cpp" />
+    <ClCompile Include="Literal.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="Scanner.cpp" />
@@ -148,9 +153,18 @@
     <ClCompile Include="SystemMain.cpp" />
     <ClCompile Include="TokenBase.cpp" />
     <ClCompile Include="TokenManager.cpp" />
+    <ClCompile Include="Unary.cpp" />
+    <ClCompile Include="Variable.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Assign.h" />
+    <ClInclude Include="Binary.h" />
+    <ClInclude Include="Call.h" />
     <ClInclude Include="Debug.h" />
+    <ClInclude Include="Expression.h" />
+    <ClInclude Include="ExpressionVisitor.h" />
+    <ClInclude Include="Grouping.h" />
+    <ClInclude Include="Literal.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Scanner.h" />
     <ClInclude Include="Tokens.h" />
@@ -159,6 +173,8 @@
     <ClInclude Include="TokenBase.h" />
     <ClInclude Include="TokenDefine.h" />
     <ClInclude Include="TokenManager.h" />
+    <ClInclude Include="Unary.h" />
+    <ClInclude Include="Variable.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="TODO.txt" />

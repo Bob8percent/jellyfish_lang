@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "Scanner.h"
 #include "TokenManager.h"
+#include "TokenBase.h"
 #include "TokenDefine.h"
 
 namespace jf
@@ -19,7 +20,7 @@ namespace jf
 		// スキャン対象のソースコード文字列
 		const std::string& source
 	)
-		:m_info{ 0, 0, source },
+		:m_info{ 0, 1, source },
 		m_tokens{}
 	{
 	}
@@ -47,9 +48,12 @@ namespace jf
 	// ソース文字列をスキャンして1つだけトークンを取得
 	void Scanner::scanToken()
 	{
+		// 現在行を保存
+		auto line = m_info.line;
 		// ソース文字列からトークンを取得
 		auto token = TokenManager::getNextToken(m_info);
-
+		// トークンに行をセット
+		token->setSourceLine(line);
 		// 取得したトークンを登録
 		m_tokens.push_back(token);
 	}

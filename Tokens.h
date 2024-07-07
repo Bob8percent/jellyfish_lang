@@ -1,4 +1,5 @@
 #pragma once
+#include "pch.h"
 #include "TokenBase.h"
 
 namespace jf
@@ -253,7 +254,7 @@ namespace jf
 			// スキャナの情報
 			Scanner::Info& info,
 			// 抜き出した単語を出力するバッファ
-			std::string* value = nullptr
+			std::string* name = nullptr
 		);
 		// ソース文字列から識別子を抜き出す
 		// 戻り値：識別子の最後の文字の次のインデックス
@@ -269,7 +270,8 @@ namespace jf
 		);
 
 	private:
-		std::string m_value;
+		// 識別子名
+		std::string m_name;
 	};
 	
 	// or

@@ -1,4 +1,4 @@
-
+#pragma once
 
 #include <cstddef>
 #include <limits>
@@ -16,6 +16,7 @@
 #include <cerrno>
 #include <system_error>
 #include <string>
+#include <any>
 
 #if __has_include(<string_view>)
 #   include <string_view>

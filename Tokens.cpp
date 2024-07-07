@@ -354,7 +354,7 @@ namespace jf
 	// コンストラクタ
 	Identifier::Identifier()
 		:Token{},
-		m_value{}
+		m_name{}
 	{
 	}
 	// ソース文字列からトークンが見つかるか
@@ -371,7 +371,7 @@ namespace jf
 				return !isKeyword(word.c_str());
 			},
 			info,
-			&m_value
+			&m_name
 		);
 	}
 
@@ -383,7 +383,7 @@ namespace jf
 		// スキャナの情報
 		Scanner::Info& info,
 		// 抜き出した単語を出力するバッファ
-		std::string* value
+		std::string* name
 	)
 	{
 		// ソース文字列から単語を抜き出す
@@ -393,8 +393,8 @@ namespace jf
 		// 単語が条件を満たすかを調べる
 		if (std::invoke(func, identifier.c_str()))
 		{
-			if (value != nullptr)
-				*value = identifier;
+			if (name != nullptr)
+				*name = identifier;
 			info.current += identifier.length();
 			return true;
 		}

@@ -6,7 +6,8 @@ namespace jf
 {
 	// デフォルトコンストラクタ
 	Token::Token()
-		:m_lexeme{ "" }
+		:m_lexeme{ "" },
+		m_line{ 1 }
 	{
 	}
 	// コンストラクタ
@@ -14,7 +15,8 @@ namespace jf
 		// トークン文字列
 		LEXEME_TYPE lexeme
 	)
-		:m_lexeme{ lexeme }
+		:m_lexeme{ lexeme },
+		m_line{ 1 }
 	{
 	}
 
