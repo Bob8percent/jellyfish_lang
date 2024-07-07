@@ -1,5 +1,4 @@
 #include "pch.h"
-// TODO: これはあくまでVisitorのベースクラス定義。具象クラスをインクルードするよう変更
 #include "ExpressionVisitor.h"
 #include "Unary.h"
 

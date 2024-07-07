@@ -1,5 +1,4 @@
-#include "pch.h"
-// TODO: これはあくまでVisitorのベースクラス定義。具象クラスをインクルードするよう変更
+#include "pch.h"+
 #include "ExpressionVisitor.h"
 #include "Grouping.h"
 

@@ -1,7 +1,7 @@
+#include "pch.h"
+#include "ExpressionVisitor.h"
 #include "Logical.h"
 
-// TODO: これはあくまでVisitorのベースクラス定義。具象クラスをインクルードするよう変更
-#include "ExpressionVisitor.h"
 namespace jf
 {
 	// コンストラクタ
